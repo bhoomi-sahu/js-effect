@@ -1,0 +1,92 @@
+ 
+  html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 41, 71);
+  font-family: sans-serif;
+}
+
+.card {
+  position: relative;
+  border-radius: 20px;
+  height: 450px;
+  width: 300px;
+  background-color: rgb(28, 28, 216);
+  padding: 20px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.card img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 20px;
+}
+
+.card h5 {
+  font-size: 20px;
+  color: red;
+  margin: 10px;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.card button {
+  background-color: cadetblue;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.big-heart {
+  color: red;
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.big-heart.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+#like-icon {
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#like-icon.liked {
+  color: red;
+}
